@@ -12,7 +12,7 @@ public enum Rank {
 	}
 	@Override
 	public String toString() {
-		return value + ""; //converting the String to a int
+		return value + ""; 
 	}
 
 	public int getValue() {

@@ -31,8 +31,6 @@ public class Card {
 
 	@Override
 	public String toString() {
-		// Ace of Spades
-		
 		return rank + " of " + suit;
 	}
 

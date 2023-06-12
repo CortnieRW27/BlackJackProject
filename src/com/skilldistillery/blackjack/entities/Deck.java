@@ -12,20 +12,32 @@ public class Deck {
 		for (Rank rank : Rank.values()) {
 			for (Suit suit : Suit.values()) {
 				Card card = new Card(rank, suit);
-				deckOfCards.add(card);	
+				deckOfCards.add(card);
 			}
 		}
-		System.out.println(deckOfCards);
 	}
+
 	public int checkDeckSize() {
 		int size = 0;
 		return deckOfCards.size();
 	}
+
 	public Card dealCard() {
-		Card deltCard = deckOfCards.remove(0);
-		return deltCard;
+		return deckOfCards.remove(0);
+
 	}
+
 	public void shuffle() {
 		Collections.shuffle(deckOfCards);
 	}
+
+	@Override
+	public String toString() {
+		return "Deck [deckOfCards=" + deckOfCards + "]";
+	}
+
+	public List<Card> getDeckOfCards() {
+		return deckOfCards;
+	}
+
 }
